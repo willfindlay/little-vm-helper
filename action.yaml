@@ -95,8 +95,7 @@ runs:
       shell: bash
       run: |
         sudo /bin/lvh run --host-mount=${{ inputs.host-mount }} --image /_images/${{ inputs.test-name }}.qcow2 \
-            --daemonize -p ${{ inputs.ssh-port }}:22 --serial-port ${{ inputs.serial-port }} \
-            --cpu ${{ inputs.cpu }} --mem ${{ inputs.mem }}
+            --daemonize -p ${{ inputs.ssh-port }}:22 --serial-port ${{ inputs.serial-port }}
 
     - name: Run test cmd in VM
       shell: bash
